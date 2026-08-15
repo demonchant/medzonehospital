@@ -1,0 +1,25 @@
+{
+  "name": "medzonehospital",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace medzone-frontend",
+    "backend:dev": "npm run dev --workspace medzone-backend",
+    "backend:start": "npm run start --workspace medzone-backend",
+    "email:worker": "npm run email:worker --workspace medzone-backend",
+    "backend:test": "npm run test --workspace medzone-backend",
+    "db:migrate": "npm run db:migrate --workspace medzone-backend",
+    "db:rollback": "npm run db:rollback --workspace medzone-backend",
+    "db:status": "npm run db:status --workspace medzone-backend",
+    "build": "npm run build --workspace medzone-frontend",
+    "check": "npm run check --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
